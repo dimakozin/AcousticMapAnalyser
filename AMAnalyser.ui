@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>869</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="AmplitudeView">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>30</y>
+      <width>511</width>
+      <height>260</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="MagnitudeView">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>300</y>
+      <width>511</width>
+      <height>270</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MicrophoneGeometryFileLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Microphone Geometry XML file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AudioDataFileLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Audio Data File (HDF5 file)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FrequencyLabel">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>220</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sampling Freq (Hz)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ThresholdLabel">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>270</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Map Threshold</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FrequencyValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>240</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>16000</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="MapThresholdBox">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>290</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LowerFreqLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lower Freq Value</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HighFreqLabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>270</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>High Freq Value</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="LowerFreqBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="HighFreqBox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>290</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InspectSignalButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Inspect Signal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RunAnalysisButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>370</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run Analysis</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MicrophoneGeometryEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Path to XML Microphone Geometry file</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="HDF5Edit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Path to H5 file</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="MicrophoneFileToolButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>110</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="HDF5ToolButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>70</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LogsLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>420</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Logs</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>331</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ChannelLabel">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="ChannelSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>42</width>
+      <height>16</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="WavFileToolButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="WavFileEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Path to WAV file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WavFileLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>WAV Audio File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ImageFileLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image File</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ImageFileEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Path to image file</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="ImageFileToolButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>150</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ConvertToH5Button">
+    <property name="geometry">
+     <rect>
+      <x>229</x>
+      <y>320</y>
+      <width>111</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Convert WAV to H5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DistanceLabel">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>220</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Distance (meters)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="DistanceEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Distance in meters</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RecordExperimentButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>110</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Record Experiment</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="MicrophoneCalibrationFileToolButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>190</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MicrophoneCalibrationFileEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Path to XML Microphone Calibration file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MicrophoneCalibrationFileLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calibration File</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
